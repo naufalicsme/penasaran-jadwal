@@ -1,0 +1,23 @@
+name: Terbit IG
+on:
+  schedule:
+    - cron: '*/5 * * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: terbit-ig
+  cancel-in-progress: false
+jobs:
+  terbit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          git config user.name "penasaran-jadwal"
+          git config user.email "penasaran-jadwal@users.noreply.github.com"
+          python3 terbit.py
+        env:
+          META_TOKEN: ${{ secrets.META_TOKEN }}
+          GH_TOKEN: ${{ github.token }}
