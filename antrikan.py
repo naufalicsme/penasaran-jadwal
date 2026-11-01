@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""Masukkan satu folder UPLOAD-* ke antrean IG (GitHub) sekaligus jadwalkan Page FB lewat API.
+"""Masukkan satu folder UPLOAD-* ke antrean IG (GitHub). Page FB distop sejak 1 Nov 2026 (19 reel cuma 13 tayangan).
 
-Pakai: python3 antrikan.py <folder-upload> 2026-11-02T18:00:00+07:00 [--tanpa-fb]
+Pakai: python3 antrikan.py <folder-upload> 2026-11-02T18:00:00+07:00 [--dengan-fb]
 """
 import json, os, subprocess, sys
 
@@ -28,7 +28,7 @@ def main():
     subprocess.run(['git', '-C', HERE, 'commit', '-q', '-m', f'Antre IG: {nama} {at}\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>'], check=True)
     subprocess.run(['git', '-C', HERE, 'push', '-q'], check=True)
     print(f'IG antre: {nama} {at}')
-    if '--tanpa-fb' not in sys.argv:
+    if '--dengan-fb' in sys.argv:
         subprocess.run([sys.executable, FB, folder, '--at', at], check=True)
 
 
