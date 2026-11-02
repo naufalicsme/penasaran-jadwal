@@ -60,11 +60,15 @@ def main():
         print('Tidak ada video yang waktunya tayang')
         return
     try:
+        if not it.get('caption', '').strip():
+            raise RuntimeError('caption kosong di antrean, tidak diterbitkan')
         cid = container(tok, it['video'], it['cover'], it['caption'])
         p = http('POST', f'{G}/{IG}/media_publish', urllib.parse.urlencode(dict(creation_id=cid, access_token=tok)).encode())
         if 'id' not in p:
             raise RuntimeError(f'publish gagal: {p.get("error", p)}')
-        it['hasil'] = http('GET', f"{G}/{p['id']}?fields=permalink&access_token={tok}").get('permalink', p['id'])
+        info = http('GET', f"{G}/{p['id']}?fields=permalink,caption&access_token={tok}")
+        it['hasil'] = info.get('permalink', p['id'])
+        it['caption_masuk'] = bool(info.get('caption', '').strip())
     except Exception as e:
         it['gagal'] = it.get('gagal', 0) + 1
         it['error'] = str(e)[:300]
@@ -73,6 +77,8 @@ def main():
     subprocess.run(['gh', 'release', 'delete', it['tag'], '--yes', '--cleanup-tag'], check=False)
     simpan(q, f"Tayang IG: {it['nama']}")
     print('Tayang:', it['hasil'])
+    if not it['caption_masuk']:
+        sys.exit(f"{it['nama']}: tayang tapi caption tidak masuk: {it['hasil']}")
 
 
 if __name__ == '__main__':
