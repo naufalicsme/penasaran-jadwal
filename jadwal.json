@@ -129,7 +129,9 @@
   "tag": "v-kipasangin",
   "video": "https://github.com/naufalicsme/penasaran-jadwal/releases/download/v-kipasangin/penasaran-kipasangin-1080p.mp4",
   "cover": "https://github.com/naufalicsme/penasaran-jadwal/releases/download/v-kipasangin/cover-kipasangin.jpg",
-  "caption": "Penasaran deh, fakta di balik kipas angin semalaman! 🌀\n\nMasuk angin itu istilah sehari-hari, bukan nama penyakit di kedokteran. Dan nggak ada bukti kipas bikin kamu sakit.\n\nYang masuk akal justru kekeringan: angin yang terus ke wajah bisa nguapin lembap di mulut, hidung, dan tenggorokan. Kipas dan bilahnya juga bisa nyebar debu, itu masalah buat yang alergi atau asma.\n\nJangan arahin kipas langsung ke badan, bersihin bilahnya, taruh air minum dekat tempat tidur. Kalau sering bangun dengan tenggorokan sakit, hidung mampet terus, atau ngorok keras, periksa ke dokter.\n\nKamu tim kipas semalaman atau tim kipas dimatiin pakai timer? Tulis di komentar 👇\n\n#penasarandeh #tahukahkamu #kipasangin #masukangin #faktaunik"
+  "caption": "Penasaran deh, fakta di balik kipas angin semalaman! 🌀\n\nMasuk angin itu istilah sehari-hari, bukan nama penyakit di kedokteran. Dan nggak ada bukti kipas bikin kamu sakit.\n\nYang masuk akal justru kekeringan: angin yang terus ke wajah bisa nguapin lembap di mulut, hidung, dan tenggorokan. Kipas dan bilahnya juga bisa nyebar debu, itu masalah buat yang alergi atau asma.\n\nJangan arahin kipas langsung ke badan, bersihin bilahnya, taruh air minum dekat tempat tidur. Kalau sering bangun dengan tenggorokan sakit, hidung mampet terus, atau ngorok keras, periksa ke dokter.\n\nKamu tim kipas semalaman atau tim kipas dimatiin pakai timer? Tulis di komentar 👇\n\n#penasarandeh #tahukahkamu #kipasangin #masukangin #faktaunik",
+  "gagal": 1,
+  "error": "proses gagal: Error: Media upload has failed with error code 2207076"
  },
  {
   "nama": "rambutbasah",
