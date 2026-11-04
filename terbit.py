@@ -44,8 +44,15 @@ def container(tok, video, cover, caption):
 
 def simpan(q, pesan):
     json.dump(q, open(Q, 'w'), ensure_ascii=False, indent=1)
-    for a in (['add', Q], ['commit', '-m', pesan], ['pull', '-q', '--rebase'], ['push', '-q']):
+    for a in (['add', Q], ['commit', '-m', pesan]):
         subprocess.run(['git', *a], check=True)
+    # push bisa ditolak sesaat oleh GitHub (4 Nov: "fatal error in commit_refs_rules"); kalau catatan "sudah tayang"
+    # tidak tersimpan, run berikutnya mengulang video yang sama, jadi coba lagi beberapa kali
+    for coba in range(5):
+        if subprocess.run(['git', 'pull', '-q', '--rebase']).returncode == 0 and subprocess.run(['git', 'push', '-q']).returncode == 0:
+            return
+        time.sleep(20 * (coba + 1))
+    raise RuntimeError('push catatan antrean gagal 5 kali')
 
 
 def main():
