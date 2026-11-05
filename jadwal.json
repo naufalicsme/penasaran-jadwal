@@ -160,8 +160,8 @@
   "video": "https://github.com/naufalicsme/penasaran-jadwal/releases/download/v-makanmalam/penasaran-makanmalam-1080p.mp4",
   "cover": "https://github.com/naufalicsme/penasaran-jadwal/releases/download/v-makanmalam/cover-makanmalam.jpg",
   "caption": "Penasaran deh, fakta di balik makan malam! 🍚\n\nKatanya bikin gemuk. Padahal pencernaan kamu tetap kerja kayak biasa, nggak peduli jam tujuh atau jam sembilan. Nasi segitu, dimakan siang atau malam, hitungannya sama.\n\nYang bikin berat badan naik itu total kalori sehari yang kebanyakan. Masalahnya, makan malam sering ditemenin gorengan, camilan, sama marathon drama Korea 😅\n\nTapi jangan terlalu dekat jam tidur, dan pilih makanan yang nggak terlalu tinggi kalori.\n\nKamu tim makan malam santai atau tim stop makan jam tujuh? Tulis di komentar 👇\n\n#penasarandeh #tahukahkamu #makanmalam #kalori #faktaunik",
-  "gagal": 2,
-  "error": "container gagal: {'message': 'User access is restricted', 'type': 'OAuthException', 'code': 25, 'error_subcode': 2207050, 'is_transient': False, 'error_user_title': 'User is restricted', 'error_user_msg': 'The Instagram account is restricted.', 'fbtrace_id': 'AhBM5oDq_BUIVDnAfE0Qjk2'}"
+  "gagal": 3,
+  "error": "container gagal: {'message': 'User access is restricted', 'type': 'OAuthException', 'code': 25, 'error_subcode': 2207050, 'is_transient': False, 'error_user_title': 'User is restricted', 'error_user_msg': 'The Instagram account is restricted.', 'fbtrace_id': 'AtD-sUXL8Roz4cFZGfuiwdL'}"
  },
  {
   "nama": "kedutan",
